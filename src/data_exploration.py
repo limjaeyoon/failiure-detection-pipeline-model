@@ -27,7 +27,7 @@ def plot_sensor(sensor: str):
     # Save to outputs/
     plot_path = f"../outputs/{sensor.lower()}_trend.png"
     plt.savefig(plot_path)
-    print(f"📊 Saved plot: {plot_path}")
+    print(f"Saved plot: {plot_path}")
     plt.close()
 
 # Plot selected sensors
