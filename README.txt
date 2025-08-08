@@ -25,6 +25,7 @@ TITLE: READINESS PIPELINE FOR PI CONNECT
     │   ├── detection.py
     │   |── model_training.py
     |   |__ model_prediction_visual.py
+    |   |__ main.py
     └── README.txt
 
 *.py DESCRIPTION*
@@ -43,6 +44,8 @@ TITLE: READINESS PIPELINE FOR PI CONNECT
 
     7. model_prediction_visual.py – Plots the confusion matrix and precision‑recall curve for any
                                     saved prediction set, exporting figures to outputs/.
+    
+    8. main.py - end-to-end script that automizes from data generation to prediction visualization
 
 *CURRENT STATUS*
 
@@ -57,4 +60,4 @@ TITLE: READINESS PIPELINE FOR PI CONNECT
     2. all knobs (e.g. z‑score threshold, IsolationForest contamination) exposed in a global config file
     3. look for data applicable in the process / model here
 
-LAST UPDATED: August 7th, 2025
+LAST UPDATED: August 8th, 2025
