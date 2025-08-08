@@ -7,7 +7,7 @@ from pathlib import Path          # NEW
 # Paths
 DATA_CSV   = "../data/reactor_predictions.csv"
 OUTPUT_DIR = Path("../outputs")
-OUTPUT_DIR.mkdir(exist_ok=True)
+OUTPUT_DIR.mkdir(parents=True,exist_ok=True)
 
 # Load predictions
 df = pd.read_csv(DATA_CSV, parse_dates=["Timestamp"])
@@ -47,6 +47,10 @@ for i in range(2):
 
 fig2.colorbar(im, ax=ax2, fraction=0.046, pad=0.04)
 fig2.tight_layout()
+
+# ADDITION 08/08 JUST STICK TO DELETING OLD FILES, IF OVERWRITE DOESNT WORK
+(OUTPUT_DIR / "timeline.png").unlink(missing_ok=True)
+(OUTPUT_DIR / "confusion_matrix.png").unlink(missing_ok=True)
 
 # Save files
 fig1.savefig(OUTPUT_DIR / "timeline.png", dpi=150)

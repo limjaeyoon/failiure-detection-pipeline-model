@@ -1,0 +1,26 @@
+{
+  "paths": {
+    "raw_csv": "data/reactor_multisensor_1day.csv",
+    "detected_csv": "data/reactor_with_detection.csv",
+    "features_csv": "data/reactor_features.csv",
+    "predictions_csv": "data/reactor_predictions.csv",
+    "outputs_dir": "outputs"
+  },
+  "zscore": { "threshold": 3.0 },
+  "rolling": { "window": 5 },
+  "isolation_forest": {
+    "n_estimators": 200,
+    "contamination": 0.001,
+    "max_samples": "auto",
+    "random_state": 42
+  },
+  "visualize": true,
+  "adapter": {
+    "timestamp_col": "Timestamp",
+    "temp_col": "Temperature",
+    "pressure_col": "Pressure",
+    "flow_col": "FlowRate",
+    "catalyst_col": "CatalystLevel",
+    "label_col": "Failure"
+  }
+}

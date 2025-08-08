@@ -24,7 +24,7 @@ y_pred = df["DetectedFailure"]
 tn, fp, fn, tp = confusion_matrix(y_true, y_pred).ravel()
 print(f"TP {tp} | FP {fp} | FN {fn} | TN {tn}")
 
-out_csv = Path(__file__).resolve().parent.parent / "outputs" / "reactor_with_detection.csv"
+out_csv = Path(__file__).resolve().parent.parent / "data" / "reactor_with_detection.csv"
 out_csv.parent.mkdir(exist_ok=True)
 df.to_csv(out_csv)
 print("Saved results to outputs/reactor_with_detection.csv")
